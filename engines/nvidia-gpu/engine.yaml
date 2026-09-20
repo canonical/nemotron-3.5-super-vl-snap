@@ -1,0 +1,21 @@
+name: nvidia-gpu
+summary: CUDA-enabled GPU acceleration
+description: |
+  Runs Nemotron 3.5 Super on NVIDIA GPUs using the CUDA build of llama.cpp.
+  Requires a recent NVIDIA proprietary driver to be installed on the host.
+vendor: Canonical Ltd
+devices:
+  anyof:
+    - type: gpu
+      vendor-id: 0x10de
+      architecture: amd64
+    - type: gpu
+      vendor-id: 0x10de
+      architecture: arm64
+runtime: llamacpp-cuda
+model:
+  default: nemotron-3.5-super-vl-q4-k-m
+  options:
+    - nemotron-3.5-super-vl-q4-k-m
+configurations:
+  sleep-idle-seconds: 600

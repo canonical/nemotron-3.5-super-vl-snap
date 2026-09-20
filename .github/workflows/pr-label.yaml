@@ -28,7 +28,6 @@ jobs:
           "ubuntu-24.04",
           "ubuntu-24.04-arm"
         ]
-      # TODO: Adjust the test matrix to match the target hardware/engines.
       test-jobs-matrix: |
         [
           {
@@ -42,12 +41,10 @@ jobs:
             "provision-data": "distro: noble",
             "install-nvidia-driver-version": 595,
             "select-engine": "nvidia-gpu",
-            "test-chat-tps": true,
-            "expected-tps": 9.4
+            "test-chat-tps": true
           }
         ]
-      # TODO: Replace with the snap name.
-      snap-name: <snap-name>
+      snap-name: nemotron-3-5-super
       testflinger-client-id: ${{ vars.TESTFLINGER_CLIENT_ID }}
     secrets:
       store-credentials: ${{ secrets.STORE_LOGIN_PR }}

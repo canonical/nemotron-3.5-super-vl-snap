@@ -1,0 +1,20 @@
+name: cpu
+summary: Optimized for x64 and ARM (armv8, armv9) CPUs
+description: |
+  Runs Nemotron 3.5 Super on the CPU using llama.cpp.
+  This engine is the universal fallback and works on any supported machine,
+  provided there is enough system memory to hold the model weights.
+vendor: Canonical Ltd
+devices:
+  anyof:
+    - type: cpu
+      architecture: amd64
+    - type: cpu
+      architecture: arm64
+runtime: llamacpp
+model:
+  default: nemotron-3.5-super-vl-q4-k-m
+  options:
+    - nemotron-3.5-super-vl-q4-k-m
+configurations:
+  sleep-idle-seconds: 600

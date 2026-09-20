@@ -1,0 +1,28 @@
+#!/bin/bash -eu
+
+port="$(modelctl get http.port)"
+host="$(modelctl get http.host)"
+sleep_idle_seconds="$(modelctl get sleep-idle-seconds)"
+model_name=$("$SNAP_NAME" model --format=json | jq -r '.name')
+
+extra_args=()
+
+verbose="$(modelctl get verbose)"
+if [ "${verbose}" = "true" ]; then
+  extra_args+=(--verbose)
+fi
+
+set -x
+# The model is a multi-shard GGUF: llama.cpp is pointed at shard 00001 and
+# auto-discovers the remaining shards next to it (see the model layout).
+# Adding --no-warmup to skip the model warmup phase during server startup in
+# order to reduce resource usage if not needed.
+exec llama-server \
+  --model "$MODEL_FILE" \
+  --alias "$model_name" \
+  --port "$port" \
+  --host "$host" \
+  --no-warmup \
+  --sleep-idle-seconds "$sleep_idle_seconds" \
+  "${extra_args[@]}" \
+  "$@"

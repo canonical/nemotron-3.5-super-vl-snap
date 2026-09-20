@@ -1,0 +1,11 @@
+name: llamacpp-cuda
+servers:
+  openai:
+    protocol: http
+    base-path: /v1
+environment:
+  - PATH=$PATH:$SNAP_COMPONENTS/llamacpp-cuda/bin
+  - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SNAP_COMPONENTS/llamacpp-cuda/lib
+  - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SNAP_COMPONENTS/llamacpp-cuda/usr/lib/$ARCH_TRIPLET
+components:
+  - llamacpp-cuda
