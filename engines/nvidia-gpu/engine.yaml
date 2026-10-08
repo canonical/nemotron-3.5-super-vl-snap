@@ -5,12 +5,13 @@ description: |
   Requires a recent NVIDIA proprietary driver to be installed on the host.
 vendor: Canonical Ltd
 devices:
+  allof:
+    - type: gpu
+      vendor-id: 0x10de # Nvidia Corporation
   anyof:
-    - type: gpu
-      vendor-id: 0x10de
+    - type: cpu
       architecture: amd64
-    - type: gpu
-      vendor-id: 0x10de
+    - type: cpu
       architecture: arm64
 runtime: llamacpp-cuda
 model:
