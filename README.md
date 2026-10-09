@@ -42,8 +42,8 @@ nemotron-3-5-super-vl
 
 Clone the repo:
 ```shell
-git clone https://github.com/canonical/nemotron-3-5-super-vl-snap
-cd nemotron-3-5-super-snap-vl
+git clone https://github.com/canonical/nemotron-3.5-super-vl-snap
+cd nemotron-3.5-super-vl-snap
 ```
 
 Initialize the development environment:
