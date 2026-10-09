@@ -6,7 +6,7 @@ SHELL := /bin/bash
 hf := pipx run --spec "huggingface_hub[cli]" hf
 
 # TODO: Replace with snap name
-SNAP_NAME ?= gemma4 
+SNAP_NAME ?= nemotron-3-5-super-vl 
 
 ENGINE ?= cpu
 

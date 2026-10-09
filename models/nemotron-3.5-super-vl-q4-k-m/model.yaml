@@ -6,6 +6,7 @@ quantization: Q4_K_M
 disk-size: 84323M
 capabilities:
   - text
+  - vision
   - thinking
   - tools
 components:
