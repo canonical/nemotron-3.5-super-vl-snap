@@ -13,13 +13,12 @@ if [ "${verbose}" = "true" ]; then
 fi
 
 set -x
-# The model is a multi-shard GGUF: llama.cpp is pointed at shard 00001 and
-# auto-discovers the remaining shards next to it (see the model layout).
+
 # Adding --no-warmup to skip the model warmup phase during server startup in
 # order to reduce resource usage if not needed.
 exec llama-server \
-  --n-gpu-layers 999 \
   --model "$MODEL_FILE" \
+  --mmproj "$MMPROJ_FILE" \
   --alias "$model_name" \
   --port "$port" \
   --host "$host" \

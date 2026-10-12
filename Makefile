@@ -57,9 +57,10 @@ init-submodules:
 		git submodule update --init; \
 	fi
 
-# TODO: Update to match the expected model(s):
-download-models: download-model-Q4_K_M
+download-models: download-model-Q4_K_M download-mmproj-BF16
 
-# TODO: Update to match the model. Add one target per model.
 download-model-Q4_K_M:
+	$(hf) download TBA
+
+download-mmproj-BF16:
 	$(hf) download TBA
