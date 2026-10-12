@@ -173,7 +173,9 @@ parts:
     stage-packages:
       - jq
     organize:
-      "*": bin/
+      "server.sh": bin/
+      "engine-server.sh": bin/
+      "server-webui.sh": bin/
 
   llamacpp:
     plugin: dump
