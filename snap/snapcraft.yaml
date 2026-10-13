@@ -32,8 +32,9 @@ description: |
   The licenses of all the bundled software can be found after installing the snap at
   `/snap/nemotron-3-5-super-vl/current/usr/share/doc`.
 
+icon: snap/gui/icon-256.png
 website: https://documentation.ubuntu.com/inference-snaps
-source-code: https://github.com/canonical/n35s-snap
+source-code: https://github.com/canonical/nemotron-3.5-super-vl-snap
 issues: https://github.com/canonical/inference-snaps/issues
 
 adopt-info: version
