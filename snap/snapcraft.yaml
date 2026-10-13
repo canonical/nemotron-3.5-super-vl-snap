@@ -115,7 +115,7 @@ parts:
 
       craftctl default
 
-  cli-lscpi:
+  cli-lspci:
     plugin: nil
     stage-packages:
       - pciutils
@@ -211,7 +211,7 @@ parts:
       "*": (component/llamacpp-cuda)
 
   model-weights:
-    plugin: nil
+    plugin: cmake
     source: model-weights
     override-build: |
       cp -rf --archive --link --no-dereference ${CRAFT_PART_SRC}/* ${CRAFT_PART_INSTALL}
