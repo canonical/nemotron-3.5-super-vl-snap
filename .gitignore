@@ -8,6 +8,9 @@ stage/
 .craft/
 .snapd-relocate/
 
+# Local build artifacts
+*.tar.gz
+
 # Model weight files
 model-weights/
 *.gguf
