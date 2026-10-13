@@ -18,3 +18,4 @@ model:
     - nemotron-3.5-super-vl-q4-k-m
 configurations:
   sleep-idle-seconds: 600
+  min-context-size: 4096
