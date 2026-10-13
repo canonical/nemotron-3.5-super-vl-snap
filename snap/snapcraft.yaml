@@ -217,26 +217,26 @@ parts:
     override-build: |
       cp -rf --archive --link --no-dereference ${CRAFT_PART_SRC}/* ${CRAFT_PART_INSTALL}
     organize:
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00001-of-00020.gguf": (component/q4-k-m-01-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00002-of-00020.gguf": (component/q4-k-m-02-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00003-of-00020.gguf": (component/q4-k-m-03-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00004-of-00020.gguf": (component/q4-k-m-04-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00005-of-00020.gguf": (component/q4-k-m-05-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00006-of-00020.gguf": (component/q4-k-m-06-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00007-of-00020.gguf": (component/q4-k-m-07-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00008-of-00020.gguf": (component/q4-k-m-08-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00009-of-00020.gguf": (component/q4-k-m-09-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00010-of-00020.gguf": (component/q4-k-m-10-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00011-of-00020.gguf": (component/q4-k-m-11-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00012-of-00020.gguf": (component/q4-k-m-12-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00013-of-00020.gguf": (component/q4-k-m-13-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00014-of-00020.gguf": (component/q4-k-m-14-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00015-of-00020.gguf": (component/q4-k-m-15-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00016-of-00020.gguf": (component/q4-k-m-16-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00017-of-00020.gguf": (component/q4-k-m-17-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00018-of-00020.gguf": (component/q4-k-m-18-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00019-of-00020.gguf": (component/q4-k-m-19-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00020-of-00020.gguf": (component/q4-k-m-20-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00001-of-00020.gguf": (component/model-q4-k-m-01-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00002-of-00020.gguf": (component/model-q4-k-m-02-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00003-of-00020.gguf": (component/model-q4-k-m-03-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00004-of-00020.gguf": (component/model-q4-k-m-04-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00005-of-00020.gguf": (component/model-q4-k-m-05-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00006-of-00020.gguf": (component/model-q4-k-m-06-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00007-of-00020.gguf": (component/model-q4-k-m-07-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00008-of-00020.gguf": (component/model-q4-k-m-08-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00009-of-00020.gguf": (component/model-q4-k-m-09-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00010-of-00020.gguf": (component/model-q4-k-m-10-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00011-of-00020.gguf": (component/model-q4-k-m-11-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00012-of-00020.gguf": (component/model-q4-k-m-12-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00013-of-00020.gguf": (component/model-q4-k-m-13-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00014-of-00020.gguf": (component/model-q4-k-m-14-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00015-of-00020.gguf": (component/model-q4-k-m-15-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00016-of-00020.gguf": (component/model-q4-k-m-16-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00017-of-00020.gguf": (component/model-q4-k-m-17-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00018-of-00020.gguf": (component/model-q4-k-m-18-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00019-of-00020.gguf": (component/model-q4-k-m-19-of-20)/
+      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00020-of-00020.gguf": (component/model-q4-k-m-20-of-20)/
       "mmproj-BF16/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-mmproj-BF16.gguf": (component/mmproj-bf16)/
     prime:
       - -*   # exclude everything not explicitly organized
@@ -253,49 +253,49 @@ parts:
       cp $SNAPCRAFT_PROJECT_DIR/NVIDIA-Nemotron-Open-Model-License-12-12-25.pdf $license_dir/
 
 components:
-  q4-k-m-01-of-20: &model-component
+  model-q4-k-m-01-of-20: &model-component
     type: standard
     summary: Q4_K_M GGUF model
     description: |
       Nemotron 3.5 Super VL Q4_K_M GGUF model weights split into 5G parts.
       All 20 parts are required to run the model.
-  q4-k-m-02-of-20:
+  model-q4-k-m-02-of-20:
     <<: *model-component
-  q4-k-m-03-of-20:
+  model-q4-k-m-03-of-20:
     <<: *model-component
-  q4-k-m-04-of-20:
+  model-q4-k-m-04-of-20:
     <<: *model-component
-  q4-k-m-05-of-20:
+  model-q4-k-m-05-of-20:
     <<: *model-component
-  q4-k-m-06-of-20:
+  model-q4-k-m-06-of-20:
     <<: *model-component
-  q4-k-m-07-of-20:
+  model-q4-k-m-07-of-20:
     <<: *model-component
-  q4-k-m-08-of-20:
+  model-q4-k-m-08-of-20:
     <<: *model-component
-  q4-k-m-09-of-20:
+  model-q4-k-m-09-of-20:
     <<: *model-component
-  q4-k-m-10-of-20:
+  model-q4-k-m-10-of-20:
     <<: *model-component
-  q4-k-m-11-of-20:
+  model-q4-k-m-11-of-20:
     <<: *model-component
-  q4-k-m-12-of-20:
+  model-q4-k-m-12-of-20:
     <<: *model-component
-  q4-k-m-13-of-20:
+  model-q4-k-m-13-of-20:
     <<: *model-component
-  q4-k-m-14-of-20:
+  model-q4-k-m-14-of-20:
     <<: *model-component
-  q4-k-m-15-of-20:
+  model-q4-k-m-15-of-20:
     <<: *model-component
-  q4-k-m-16-of-20:
+  model-q4-k-m-16-of-20:
     <<: *model-component
-  q4-k-m-17-of-20:
+  model-q4-k-m-17-of-20:
     <<: *model-component
-  q4-k-m-18-of-20:
+  model-q4-k-m-18-of-20:
     <<: *model-component
-  q4-k-m-19-of-20:
+  model-q4-k-m-19-of-20:
     <<: *model-component
-  q4-k-m-20-of-20:
+  model-q4-k-m-20-of-20:
     <<: *model-component
   mmproj-bf16:
     type: standard
