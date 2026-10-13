@@ -1,9 +1,10 @@
 name: cpu
-summary: Optimized for x64 and ARM (armv8, armv9) CPUs
+summary: CPU-optimized for workstations
 description: |
-  Runs Nemotron 3.5 Super on the CPU using llama.cpp.
-  This engine is the universal fallback and works on any supported machine,
-  provided there is enough system memory to hold the model weights.
+  This engine uses llama.cpp.
+  
+  It is optimized for both amd64 and arm64 CPU architectures, for a wide range
+  of architecture variants.
 vendor: Canonical Ltd
 devices:
   anyof:
