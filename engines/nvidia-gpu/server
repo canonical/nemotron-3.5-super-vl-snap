@@ -1,0 +1,30 @@
+#!/bin/bash -eu
+
+port="$(modelctl get http.port)"
+host="$(modelctl get http.host)"
+sleep_idle_seconds="$(modelctl get sleep-idle-seconds)"
+model_name=$("$SNAP_NAME" model --format=json | jq -r '.name')
+min_context_size="$(modelctl get min-context-size)"
+
+extra_args=()
+
+verbose="$(modelctl get verbose)"
+if [ "${verbose}" = "true" ]; then
+  extra_args+=(--verbose)
+fi
+
+set -x
+
+# Adding --no-warmup to skip the model warmup phase during server startup in
+# order to reduce resource usage if not needed.
+exec llama-server \
+  --model "$MODEL_FILE" \
+  --mmproj "$MMPROJ_FILE" \
+  --alias "$model_name" \
+  --port "$port" \
+  --host "$host" \
+  --no-warmup \
+  --sleep-idle-seconds "$sleep_idle_seconds" \
+  --fit-ctx "$min_context_size" \
+  "${extra_args[@]}" \
+  "$@"

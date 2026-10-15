@@ -6,7 +6,7 @@ SHELL := /bin/bash
 hf := pipx run --spec "huggingface_hub[cli]" hf
 
 # TODO: Replace with snap name
-SNAP_NAME ?= gemma4 
+SNAP_NAME ?= nemotron-3-5-super-vl 
 
 ENGINE ?= cpu
 
@@ -57,10 +57,10 @@ init-submodules:
 		git submodule update --init; \
 	fi
 
-# TODO: Update to match the expected model(s):
-download-models: download-model-E4B-Q4_K_M
+download-models: download-model-Q4_K_M download-mmproj-BF16
 
-# TODO: Update to match the model. Add one target per model.
-download-model-E4B-Q4_K_M:
-	$(hf) download unsloth/gemma-4-E4B-it-GGUF gemma-4-E4B-it-Q4_K_M.gguf \
-		--local-dir components/model-e4b-q4-k-m-gguf/
+download-model-Q4_K_M:
+	$(hf) download TBA
+
+download-mmproj-BF16:
+	$(hf) download TBA
