@@ -60,7 +60,11 @@ init-submodules:
 download-models: download-model-Q4_K_XL download-mmproj-BF16
 
 download-model-Q4_K_XL:
-	$(hf) download TBA
+	@echo "Downloading Nemotron 3.5 Super VL Q4_K_XL model weights..."
+	$(hf) download inference-snaps/Nemotron-3.5-Super-VL --include "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_XL-*-of-00020.gguf" \
+		--local-dir model-weights/Q4_K_XL/
 
 download-mmproj-BF16:
-	$(hf) download TBA
+	@echo "Downloading Nemotron 3.5 Super VL mmproj-BF16 model weights..."
+	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF mmproj-BF16.gguf \
+		--local-dir model-weights/mmproj-BF16/
