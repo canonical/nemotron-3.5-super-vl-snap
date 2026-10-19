@@ -1,0 +1,71 @@
+name: nemotron-3.5-super-vl-nvfp4
+description: |
+  Nemotron 3.5 Super vl 120B-A12B quantized to NVFP4.
+model-card-url: https://huggingface.co/inference-snaps/Nemotron-3.5-Super-VL-120B-A12B
+quantization: NVFP4
+disk-size: 78G
+capabilities:
+  - text
+  - vision
+  - thinking
+  - tools
+components:
+  - model-nvfp4-01-of-17
+  - model-nvfp4-02-of-17
+  - model-nvfp4-03-of-17
+  - model-nvfp4-04-of-17
+  - model-nvfp4-05-of-17
+  - model-nvfp4-06-of-17
+  - model-nvfp4-07-of-17
+  - model-nvfp4-08-of-17
+  - model-nvfp4-09-of-17
+  - model-nvfp4-10-of-17
+  - model-nvfp4-11-of-17
+  - model-nvfp4-12-of-17
+  - model-nvfp4-13-of-17
+  - model-nvfp4-14-of-17
+  - model-nvfp4-15-of-17
+  - model-nvfp4-16-of-17
+  - model-nvfp4-17-of-17
+  - mmproj-bf16
+  - draft-lilicorr
+environment:
+  - MODEL_PARTS_DIR=/tmp/model-nvfp4-parts
+  - MODEL_FILE=$MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00001-of-00017.gguf
+  - MMPROJ_FILE=$SNAP_COMPONENTS/mmproj-bf16/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-mmproj-BF16.gguf
+  - DRAFT_FILE=$SNAP_COMPONENTS/draft-lilicorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf
+layout:
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00001-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-01-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00001-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00002-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-02-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00002-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00003-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-03-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00003-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00004-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-04-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00004-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00005-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-05-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00005-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00006-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-06-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00006-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00007-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-07-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00007-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00008-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-08-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00008-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00009-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-09-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00009-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00010-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-10-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00010-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00011-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-11-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00011-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00012-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-12-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00012-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00013-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-13-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00013-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00014-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-14-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00014-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00015-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-15-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00015-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00016-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-16-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00016-of-00017.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00017-of-00017.gguf:
+    symlink: $SNAP_COMPONENTS/model-nvfp4-17-of-17/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00017-of-00017.gguf
