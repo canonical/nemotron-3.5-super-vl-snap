@@ -35,7 +35,7 @@ components:
 environment:
   - MODEL_PARTS_DIR=/tmp/model-q4-k-xl-parts
   - MODEL_FILE=$MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_XL-00001-of-00020.gguf
-  - MMPROJ_FILE=$SNAP_COMPONENTS/mmproj-bf16/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-mmproj-BF16.gguf
+  - MMPROJ_FILE=$SNAP_COMPONENTS/mmproj-bf16/mmproj-BF16.gguf
   - DRAFT_FILE=$SNAP_COMPONENTS/draft-lilicorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf
 layout:
   $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_XL-00001-of-00020.gguf:
