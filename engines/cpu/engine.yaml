@@ -20,3 +20,5 @@ model:
 configurations:
   sleep-idle-seconds: 600
   min-context-size: 4096
+  draft-min: 0
+  draft-max: 3

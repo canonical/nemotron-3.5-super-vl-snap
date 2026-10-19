@@ -57,7 +57,7 @@ init-submodules:
 		git submodule update --init; \
 	fi
 
-download-models: download-model-Q4_K_XL download-mmproj-BF16
+download-models: download-model-Q4_K_XL download-mmproj-BF16 download-model-lilicorr
 
 download-model-Q4_K_XL:
 	@echo "Downloading Nemotron 3.5 Super VL Q4_K_XL model weights..."
@@ -68,3 +68,8 @@ download-mmproj-BF16:
 	@echo "Downloading Nemotron 3.5 Super VL mmproj-BF16 model weights..."
 	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF mmproj-BF16.gguf \
 		--local-dir model-weights/mmproj-BF16/
+
+download-model-lilicorr:
+	@echo "Downloading Nemotron 3.5 Super VL LiLiCorr MTP model weights..."
+	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF LiLiCorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf \
+		--local-dir model-weights/draft-lilicorr/
