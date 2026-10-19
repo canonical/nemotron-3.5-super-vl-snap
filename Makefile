@@ -72,7 +72,7 @@ download-mmproj-BF16:
 download-model-lilicorr:
 	@echo "Downloading Nemotron 3.5 Super VL LiLiCorr MTP model weights..."
 	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF LiLiCorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf \
-		--local-dir model-weights/draft-lilicorr/
+		--local-dir model-weights/
 
 download-model-NVFP4:
 	@echo "Downloading Nemotron 3.5 Super VL NVFP4 model weights..."
