@@ -57,9 +57,9 @@ init-submodules:
 		git submodule update --init; \
 	fi
 
-download-models: download-model-Q4_K_M download-mmproj-BF16
+download-models: download-model-Q4_K_XL download-mmproj-BF16
 
-download-model-Q4_K_M:
+download-model-Q4_K_XL:
 	$(hf) download TBA
 
 download-mmproj-BF16:
