@@ -21,7 +21,6 @@ model:
   default: nemotron-3.5-super-vl-nvfp4
   options:
     - nemotron-3.5-super-vl-nvfp4
-    - nemotron-3.5-super-vl-q4-k-xl
 configurations:
   sleep-idle-seconds: 600
   min-context-size: 4096
