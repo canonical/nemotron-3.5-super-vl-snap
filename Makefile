@@ -61,7 +61,7 @@ download-models: download-model-Q4_K_XL download-mmproj-BF16 download-model-lili
 
 download-model-Q4_K_XL:
 	@echo "Downloading Nemotron 3.5 Super VL Q4_K_XL model weights..."
-	$(hf) download inference-snaps/Nemotron-3.5-Super-VL --include "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_XL-*-of-00020.gguf" \
+	$(hf) download inference-snaps/Nemotron-3.5-Super-VL --include "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-*-of-00020.gguf" \
 		--local-dir model-weights/Q4_K_XL/
 
 download-mmproj-BF16:
