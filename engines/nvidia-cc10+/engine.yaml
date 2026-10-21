@@ -1,9 +1,10 @@
-name: nvidia-blackwell-plus
+name: nvidia-cc10+
 summary: CUDA optimized for NVIDIA Blackwell GPUs or later
 description: |
-  This engine uses llama.cpp with the CUDA backend, specifically 
-  optimized for the NVIDIA Blackwell architecture or later.
-  
+  This engine uses llama.cpp with the CUDA backend, specifically
+  optimized for NVIDIA GPUs with compute capability 10.0 or higher
+  (NVIDIA Blackwell architecture or later).
+
   This engine supports both amd64 and arm64 CPU architectures.
 vendor: Canonical Ltd
 devices:
