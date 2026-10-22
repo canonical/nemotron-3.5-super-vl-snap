@@ -18,13 +18,14 @@ concurrency:
 jobs:
   cicd:
     if: github.repository == 'canonical/nemotron-3.5-super-vl-snap' # do not run on forks
-    uses: canonical/inference-snaps-dev/.github/workflows/reuse-cicd.yaml@v2
+    uses: canonical/inference-snaps-dev/.github/workflows/reuse-cicd.yaml@configurable-timeouts
     with:
       build-runner: |
         [
           ["amd64", "2xlarge-extra", "noble", "self-hosted"],
           ["arm64", "large-extra", "noble", "self-hosted"]
         ]
+      timeout-minutes: 600
       store-track: latest
       snap-name: nemotron-3-5-super-vl
       smoke-test-engine: cpu
