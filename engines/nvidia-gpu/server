@@ -17,11 +17,13 @@ if [ "${verbose}" = "true" ]; then
 fi
 
 if ! [[ "$draft_max" =~ ^[0-9]+$ ]] || (( 10#$draft_max < 1 )); then
-  fail "draft-max must be an integer >= 1: $draft_max"
+  printf '%s\n' "draft-max must be an integer >= 1: $draft_max" >&2
+  exit 1
 fi
 
-if ! [[ "$draft_min" =~ ^[0-9]+$ ]] || (( 10#$draft_min > draft_max )); then
-  fail "draft-min must be an integer between 0 and draft-max ($draft_max): $draft_min"
+if ! [[ "$draft_min" =~ ^[0-9]+$ ]] || (( 10#$draft_min > 10#$draft_max )); then
+  printf '%s\n' "draft-min must be an integer between 0 and draft-max ($draft_max): $draft_min" >&2
+  exit 1
 fi
 
 set -x
