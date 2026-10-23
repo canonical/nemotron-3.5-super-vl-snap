@@ -1,0 +1,47 @@
+#!/bin/bash -eu
+
+port="$(modelctl get http.port)"
+host="$(modelctl get http.host)"
+sleep_idle_seconds="$(modelctl get sleep-idle-seconds)"
+model_name=$("$SNAP_NAME" model --format=json | jq -r '.name')
+min_context_size="$(modelctl get min-context-size)"
+
+draft_min="$(modelctl get draft-min)"
+draft_max="$(modelctl get draft-max)"
+
+extra_args=()
+
+verbose="$(modelctl get verbose)"
+if [ "${verbose}" = "true" ]; then
+  extra_args+=(--verbose)
+fi
+
+if ! [[ "$draft_max" =~ ^[0-9]+$ ]] || (( 10#$draft_max < 1 )); then
+  printf '%s\n' "draft-max must be an integer >= 1: $draft_max" >&2
+  exit 1
+fi
+
+if ! [[ "$draft_min" =~ ^[0-9]+$ ]] || (( 10#$draft_min > 10#$draft_max )); then
+  printf '%s\n' "draft-min must be an integer between 0 and draft-max ($draft_max): $draft_min" >&2
+  exit 1
+fi
+
+set -x
+
+# Adding --no-warmup to skip the model warmup phase during server startup in
+# order to reduce resource usage if not needed.
+exec llama-server \
+  --model "$MODEL_FILE" \
+  --model-draft "$DRAFT_FILE" \
+  --mmproj "$MMPROJ_FILE" \
+  --alias "$model_name" \
+  --port "$port" \
+  --host "$host" \
+  --no-warmup \
+  --sleep-idle-seconds "$sleep_idle_seconds" \
+  --fit-ctx "$min_context_size" \
+  --spec-type "draft-dflash" \
+  --spec-draft-n-min "$draft_min" \
+  --spec-draft-n-max "$draft_max" \
+  "${extra_args[@]}" \
+  "$@"

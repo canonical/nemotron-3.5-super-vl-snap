@@ -217,27 +217,45 @@ parts:
     override-build: |
       cp -rf --archive --link --no-dereference ${CRAFT_PART_SRC}/* ${CRAFT_PART_INSTALL}
     organize:
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00001-of-00020.gguf": (component/model-q4-k-m-01-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00002-of-00020.gguf": (component/model-q4-k-m-02-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00003-of-00020.gguf": (component/model-q4-k-m-03-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00004-of-00020.gguf": (component/model-q4-k-m-04-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00005-of-00020.gguf": (component/model-q4-k-m-05-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00006-of-00020.gguf": (component/model-q4-k-m-06-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00007-of-00020.gguf": (component/model-q4-k-m-07-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00008-of-00020.gguf": (component/model-q4-k-m-08-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00009-of-00020.gguf": (component/model-q4-k-m-09-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00010-of-00020.gguf": (component/model-q4-k-m-10-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00011-of-00020.gguf": (component/model-q4-k-m-11-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00012-of-00020.gguf": (component/model-q4-k-m-12-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00013-of-00020.gguf": (component/model-q4-k-m-13-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00014-of-00020.gguf": (component/model-q4-k-m-14-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00015-of-00020.gguf": (component/model-q4-k-m-15-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00016-of-00020.gguf": (component/model-q4-k-m-16-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00017-of-00020.gguf": (component/model-q4-k-m-17-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00018-of-00020.gguf": (component/model-q4-k-m-18-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00019-of-00020.gguf": (component/model-q4-k-m-19-of-20)/
-      "Q4_K_M/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Q4_K_M-00020-of-00020.gguf": (component/model-q4-k-m-20-of-20)/
-      "mmproj-BF16/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-mmproj-BF16.gguf": (component/mmproj-bf16)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00020.gguf": (component/model-q4-k-xl-01-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00002-of-00020.gguf": (component/model-q4-k-xl-02-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00003-of-00020.gguf": (component/model-q4-k-xl-03-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00004-of-00020.gguf": (component/model-q4-k-xl-04-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00005-of-00020.gguf": (component/model-q4-k-xl-05-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00006-of-00020.gguf": (component/model-q4-k-xl-06-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00007-of-00020.gguf": (component/model-q4-k-xl-07-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00008-of-00020.gguf": (component/model-q4-k-xl-08-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00009-of-00020.gguf": (component/model-q4-k-xl-09-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00010-of-00020.gguf": (component/model-q4-k-xl-10-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00011-of-00020.gguf": (component/model-q4-k-xl-11-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00012-of-00020.gguf": (component/model-q4-k-xl-12-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00013-of-00020.gguf": (component/model-q4-k-xl-13-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00014-of-00020.gguf": (component/model-q4-k-xl-14-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00015-of-00020.gguf": (component/model-q4-k-xl-15-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00016-of-00020.gguf": (component/model-q4-k-xl-16-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00017-of-00020.gguf": (component/model-q4-k-xl-17-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00018-of-00020.gguf": (component/model-q4-k-xl-18-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00019-of-00020.gguf": (component/model-q4-k-xl-19-of-20)/
+      "Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00020-of-00020.gguf": (component/model-q4-k-xl-20-of-20)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00001-of-00017.gguf": (component/model-nvfp4-01-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00002-of-00017.gguf": (component/model-nvfp4-02-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00003-of-00017.gguf": (component/model-nvfp4-03-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00004-of-00017.gguf": (component/model-nvfp4-04-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00005-of-00017.gguf": (component/model-nvfp4-05-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00006-of-00017.gguf": (component/model-nvfp4-06-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00007-of-00017.gguf": (component/model-nvfp4-07-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00008-of-00017.gguf": (component/model-nvfp4-08-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00009-of-00017.gguf": (component/model-nvfp4-09-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00010-of-00017.gguf": (component/model-nvfp4-10-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00011-of-00017.gguf": (component/model-nvfp4-11-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00012-of-00017.gguf": (component/model-nvfp4-12-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00013-of-00017.gguf": (component/model-nvfp4-13-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00014-of-00017.gguf": (component/model-nvfp4-14-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00015-of-00017.gguf": (component/model-nvfp4-15-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00016-of-00017.gguf": (component/model-nvfp4-16-of-17)/
+      "NVFP4/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-00017-of-00017.gguf": (component/model-nvfp4-17-of-17)/
+      "mmproj-BF16/mmproj-BF16.gguf": (component/mmproj-bf16)/
+      "LiLiCorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf": (component/draft-lilicorr)/
     prime:
       - -*   # exclude everything not explicitly organized
 
@@ -253,54 +271,96 @@ parts:
       cp $SNAPCRAFT_PROJECT_DIR/LICENSE-Nemotron-3.5-Super-VL $license_dir/
 
 components:
-  model-q4-k-m-01-of-20: &model-component
+  model-q4-k-xl-01-of-20: &model-component
     type: standard
-    summary: Q4_K_M GGUF model
+    summary: Q4_K_XL GGUF model
     description: |
-      Nemotron 3.5 Super VL Q4_K_M GGUF model weights split into 5G parts.
+      Nemotron 3.5 Super VL Q4_K_XL GGUF model weights split into 5G parts.
       All 20 parts are required to run the model.
-  model-q4-k-m-02-of-20:
+  model-q4-k-xl-02-of-20:
     <<: *model-component
-  model-q4-k-m-03-of-20:
+  model-q4-k-xl-03-of-20:
     <<: *model-component
-  model-q4-k-m-04-of-20:
+  model-q4-k-xl-04-of-20:
     <<: *model-component
-  model-q4-k-m-05-of-20:
+  model-q4-k-xl-05-of-20:
     <<: *model-component
-  model-q4-k-m-06-of-20:
+  model-q4-k-xl-06-of-20:
     <<: *model-component
-  model-q4-k-m-07-of-20:
+  model-q4-k-xl-07-of-20:
     <<: *model-component
-  model-q4-k-m-08-of-20:
+  model-q4-k-xl-08-of-20:
     <<: *model-component
-  model-q4-k-m-09-of-20:
+  model-q4-k-xl-09-of-20:
     <<: *model-component
-  model-q4-k-m-10-of-20:
+  model-q4-k-xl-10-of-20:
     <<: *model-component
-  model-q4-k-m-11-of-20:
+  model-q4-k-xl-11-of-20:
     <<: *model-component
-  model-q4-k-m-12-of-20:
+  model-q4-k-xl-12-of-20:
     <<: *model-component
-  model-q4-k-m-13-of-20:
+  model-q4-k-xl-13-of-20:
     <<: *model-component
-  model-q4-k-m-14-of-20:
+  model-q4-k-xl-14-of-20:
     <<: *model-component
-  model-q4-k-m-15-of-20:
+  model-q4-k-xl-15-of-20:
     <<: *model-component
-  model-q4-k-m-16-of-20:
+  model-q4-k-xl-16-of-20:
     <<: *model-component
-  model-q4-k-m-17-of-20:
+  model-q4-k-xl-17-of-20:
     <<: *model-component
-  model-q4-k-m-18-of-20:
+  model-q4-k-xl-18-of-20:
     <<: *model-component
-  model-q4-k-m-19-of-20:
+  model-q4-k-xl-19-of-20:
     <<: *model-component
-  model-q4-k-m-20-of-20:
+  model-q4-k-xl-20-of-20:
     <<: *model-component
+  model-nvfp4-01-of-17: &model-nvfp4
+    type: standard
+    summary: NVFP4 GGUF model
+    description: |
+      Nemotron 3.5 Super VL NVFP4 GGUF model weights split into 5G parts.
+      All 17 parts are required to run the model.
+  model-nvfp4-02-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-03-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-04-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-05-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-06-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-07-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-08-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-09-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-10-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-11-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-12-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-13-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-14-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-15-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-16-of-17:
+    <<: *model-nvfp4
+  model-nvfp4-17-of-17:
+    <<: *model-nvfp4
   mmproj-bf16:
     type: standard
     summary: Multimodal Projector in BF16
     description: Nemotron 3.5 Super VL Multimodal Projector component.
+  draft-lilicorr:
+    type: standard
+    summary: LiLiCorr MTP in NVFP4
+    description: Nemotron 3.5 Super VL LiLiCorr Multi Token Predictor model component.
   llamacpp:
     type: standard
     summary: llama.cpp CPU runtime

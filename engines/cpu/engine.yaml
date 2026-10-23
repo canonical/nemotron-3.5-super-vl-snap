@@ -14,9 +14,11 @@ devices:
       architecture: arm64
 runtime: llamacpp
 model:
-  default: nemotron-3.5-super-vl-q4-k-m
+  default: nemotron-3.5-super-vl-q4-k-xl
   options:
-    - nemotron-3.5-super-vl-q4-k-m
+    - nemotron-3.5-super-vl-q4-k-xl
 configurations:
   sleep-idle-seconds: 600
   min-context-size: 4096
+  draft-min: 0
+  draft-max: 3

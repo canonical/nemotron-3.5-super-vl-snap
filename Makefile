@@ -57,10 +57,24 @@ init-submodules:
 		git submodule update --init; \
 	fi
 
-download-models: download-model-Q4_K_M download-mmproj-BF16
+download-models: download-model-Q4_K_XL download-mmproj-BF16 download-model-lilicorr download-model-NVFP4
 
-download-model-Q4_K_M:
-	$(hf) download TBA
+download-model-Q4_K_XL:
+	@echo "Downloading Nemotron 3.5 Super VL Q4_K_XL model weights..."
+	$(hf) download inference-snaps/Nemotron-3.5-Super-VL --include "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-*-of-00020.gguf" \
+		--local-dir model-weights/Q4_K_XL/
 
 download-mmproj-BF16:
-	$(hf) download TBA
+	@echo "Downloading Nemotron 3.5 Super VL mmproj-BF16 model weights..."
+	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF mmproj-BF16.gguf \
+		--local-dir model-weights/mmproj-BF16/
+
+download-model-lilicorr:
+	@echo "Downloading Nemotron 3.5 Super VL LiLiCorr MTP model weights..."
+	$(hf) download unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF LiLiCorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf \
+		--local-dir model-weights/
+
+download-model-NVFP4:
+	@echo "Downloading Nemotron 3.5 Super VL NVFP4 model weights..."
+	$(hf) download inference-snaps/Nemotron-3.5-Super-VL --include "NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-*-of-00017.gguf" \
+		--local-dir model-weights/NVFP4/

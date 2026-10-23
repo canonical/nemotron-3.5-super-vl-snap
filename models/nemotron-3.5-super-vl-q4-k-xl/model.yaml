@@ -1,0 +1,80 @@
+name: nemotron-3.5-super-vl-q4-k-xl
+description: |
+  Nemotron 3.5 Super vl 120B-A12B quantized to Q4_K_XL.
+model-card-url: https://huggingface.co/inference-snaps/Nemotron-3.5-Super-VL-120B-A12B
+quantization: Q4_K_XL
+disk-size: 84G
+capabilities:
+  - text
+  - vision
+  - thinking
+  - tools
+components:
+  - model-q4-k-xl-01-of-20
+  - model-q4-k-xl-02-of-20
+  - model-q4-k-xl-03-of-20
+  - model-q4-k-xl-04-of-20
+  - model-q4-k-xl-05-of-20
+  - model-q4-k-xl-06-of-20
+  - model-q4-k-xl-07-of-20
+  - model-q4-k-xl-08-of-20
+  - model-q4-k-xl-09-of-20
+  - model-q4-k-xl-10-of-20
+  - model-q4-k-xl-11-of-20
+  - model-q4-k-xl-12-of-20
+  - model-q4-k-xl-13-of-20
+  - model-q4-k-xl-14-of-20
+  - model-q4-k-xl-15-of-20
+  - model-q4-k-xl-16-of-20
+  - model-q4-k-xl-17-of-20
+  - model-q4-k-xl-18-of-20
+  - model-q4-k-xl-19-of-20
+  - model-q4-k-xl-20-of-20
+  - mmproj-bf16
+  - draft-lilicorr
+environment:
+  - MODEL_PARTS_DIR=/tmp/model-q4-k-xl-parts
+  - MODEL_FILE=$MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00020.gguf
+  - MMPROJ_FILE=$SNAP_COMPONENTS/mmproj-bf16/mmproj-BF16.gguf
+  - DRAFT_FILE=$SNAP_COMPONENTS/draft-lilicorr/lilicorr-NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4.gguf
+layout:
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-01-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00002-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-02-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00002-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00003-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-03-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00003-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00004-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-04-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00004-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00005-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-05-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00005-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00006-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-06-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00006-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00007-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-07-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00007-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00008-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-08-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00008-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00009-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-09-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00009-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00010-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-10-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00010-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00011-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-11-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00011-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00012-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-12-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00012-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00013-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-13-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00013-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00014-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-14-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00014-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00015-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-15-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00015-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00016-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-16-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00016-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00017-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-17-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00017-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00018-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-18-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00018-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00019-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-19-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00019-of-00020.gguf
+  $MODEL_PARTS_DIR/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00020-of-00020.gguf:
+    symlink: $SNAP_COMPONENTS/model-q4-k-xl-20-of-20/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00020-of-00020.gguf
