@@ -6,7 +6,7 @@ on:
 
 jobs:
   ai-test:
-    runs-on: [self-hosted, 2xlarge-extra, noble, amd64]
+    runs-on: [amd64, 2xlarge-extra, noble, self-hosted]
     steps:
       - name: Run test
         uses: canonical/inference-snaps-dev/.github/actions/agentic-test@v2
