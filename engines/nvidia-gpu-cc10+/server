@@ -26,6 +26,17 @@ if ! [[ "$draft_min" =~ ^[0-9]+$ ]] || (( 10#$draft_min > 10#$draft_max )); then
   exit 1
 fi
 
+if ! devices="$(llama-server --list-devices 2>&1)"; then
+  printf '%s\n' "$devices" >&2
+  echo "Failed to query CUDA devices." >&2
+  exit 1
+fi
+if ! grep -qE '^[[:space:]]*CUDA[0-9]+:' <<< "$devices"; then
+  printf '%s\n' "$devices" >&2
+  echo "No CUDA device found." >&2
+  exit 1
+fi
+
 set -x
 
 # Adding --no-warmup to skip the model warmup phase during server startup in
